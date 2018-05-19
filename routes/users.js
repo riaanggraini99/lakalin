@@ -13,12 +13,12 @@ var passport		= 	require('passport');
 var localStrategy	=	require('passport-local').Strategy;
 
 
-router.get('/', function(req, res, next) {
-	User.find({}, function(err, users){
-		console.log(users)    
-		res.render('index', { title: 'Home', users:users});
-	});
-	});
+// router.get('/', function(req, res, next) {
+// 	User.find({}, function(err, users){
+// 		console.log(users)    
+// 		res.render('admin_index', { title: 'Home', users:users});
+// 	});
+// 	});
 
   
 
