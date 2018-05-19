@@ -28,7 +28,7 @@ var db 				  =	mongoose.connection;
 
 
 // var routes 				= 	require('./routes/index');
-//var users				=	require('./routes/users');
+var polresRoutes			=	require('./routes/polres');
 var adminRoutes 		=	require('./routes/admin');
 //var addCar				=	require('./routes/car_add');
 //var routeradmin			= 	require('./routes/admin_login');
@@ -98,7 +98,7 @@ app.use(function(req,res,next) {
 
 //app.use('/', users);
 app.use('/admin', adminRoutes);
-//app.use('/api/car', addCar);
+app.use('/polres', polresRoutes);
 
 app.get('*', function(req,res,next) {
 	//local variable to hold user info
