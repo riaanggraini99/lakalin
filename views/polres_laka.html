@@ -1,4 +1,4 @@
-{% extends 'admin_layout.html' %}
+{% extends 'polres_layout.html' %}
 
 
 {% block content %}
@@ -29,9 +29,24 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td></td>
-                      <td><center><a href = "customers/{{customer.id}}/edit" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</a>
-                          <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button></center></td>
-              
+                          <td>
+                          </td>
+                      <td>
+                          <button id="toggle" type="button"  onclick="myFunction()" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> follow up</button></center>
+                          <a href = "/polres/laporan_laka/detail_laka" button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> Detail</button></center></td>
+                          <script>
+
+                              function myFunction() {
+                                  var change = document.getElementById("toggle");
+                                  if (change.innerHTML == "follow up")
+                                  {
+                                      change.innerHTML = "followed up";
+                                  }
+                                  else {
+                                      change.innerHTML = "follow up";
+                                  }
+                              }
+                  
+                          </script>
                   </tr>
 {% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'RS_layout.html' %}
+
+
+{% block content %}
+
+<div class="container">
+        <form class="form-horizontal">
+            <b>1. Yang bertanda tangan dibawah ini</b>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Nama:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Nama" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Rumah Sakit:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Rumah Sakit" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Alamat:</label>
+            <div class="col-sm-10">
+              <textarea  class="form-control" id="email" placeholder="Alamat" name="email"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Tanggal Kecelakaan:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Tanggal Kecelakaan" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Akibat Kecelakaan:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Akibat Kecelakaan" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Jenis Kelamin:</label>
+            <div class="col-sm-3">
+                  <div class="radio">
+                          <label><input type="radio" name="optradio">Laki-laki</label>
+                        </div>
+                        <div class="radio">
+                              <label><input type="radio" name="optradio">Perempuan</label>
+                            </div>
+      
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Atas nama:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Atas nama" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Jenis Kelamin:</label>
+                  <div class="col-sm-3">
+                        <div class="radio">
+                                <label><input type="radio" name="optradio">Laki-laki</label>
+                              </div>
+                              <div class="radio">
+                                    <label><input type="radio" name="optradio">Perempuan</label>
+                                  </div>
+            
+                  </div>
+                </div>
+                
+          <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Alamat:</label>
+                  <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" placeholder="Alamat" name="email">
+                  </div>
+                  </div>
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Umur:</label>
+              <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" placeholder="Umur" name="email">
+              </div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Keadaan Korban:</label>
+                  <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" placeholder="Keadaan Korban" name="email">
+              </div>
+          </div>
+          <hr/>
+          <b>2. Penjelasan Keadaan Korban</b>
+                  <div class="form-group">
+                      <label class="control-label col-sm-2" for="email">Cedera yang diderita korban:</label>
+                      <div class="col-sm-10">
+                          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                  </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Penyakit yang diderita (Diagnosa):</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+          </div>
+          
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <a href = "/rumah_sakit/cetak_laporan" button type="submit" class="btn btn-primary">Kirim</button>
+            </a></div>
+      
+        </form>
+      </div>
+
+{% endblock %}

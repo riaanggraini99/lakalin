@@ -1,0 +1,50 @@
+{% extends 'RS_layout.html' %}
+
+
+{% block content %}
+
+
+<body id="page-top" class="fixed-nav sticky-footer bg-dark">
+  <div class="card mb-3">
+    <div class="card-header">
+      <i class="fa fa-table">Korban List</i>
+       <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                  <tr>
+                        <th>No</th>
+                          <th>Nama Dokter</th>
+                          <th>Tanggal Kecelakaan</th>
+                          <th>Akibat kecelakaan</th>
+                          <th>Nama Korban</th>
+                          <th>Jenis Kelamin Korban</th>
+                          <th>Alamat korban</th>
+                     
+                          <th>Keadaan Korban</th>
+                         
+                       
+                          <th>Status</th>
+                          <th>Action</th>
+                  </tr>
+              
+                  </thead>
+                  <tbody>
+                          
+                  <tr >
+                      
+                          <td>1</td>
+                          <td>paijo</td>
+                          <td>12/12/1212</td>
+                          <td>diseruduk kebo</td>
+                          <td>haqi</td>
+                          <td>belom jelas</td>
+                          <td>jakal km 8</td>
+                          
+                          <td>llllll</td>
+                          <td>hahahah</td>
+                      <td><center><a href = "customers/{{customer.id}}/edit" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Detail&nbsp;&nbsp;</a>
+                          <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</button></center></td>
+              
+                  </tr>
+{% endblock %}

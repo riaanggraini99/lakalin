@@ -1,0 +1,290 @@
+{% extends 'polres_layout.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=cancel] {
+    background-color:red;
+    color:white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=cancel]:hover {
+    background-color:#DC143C;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Form</h2>
+<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Nomer Surat</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="nomer_surat" placeholder="masukan nomer surat">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Nama Pelapor</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="fullname" placeholder="masukan nama pelapor">
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-25">
+        <label for="lname">waktu kejadian</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="time" name="time" placeholder="">
+      </div>
+    </div>
+    
+       <div class="row">
+      <div class="col-25">
+        <label for="lname">tempat kejadian</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="place" name="place" placeholder="">
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Bagaimana Terjadi</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    
+    
+           <div class="row">
+      <div class="col-25">
+        <label for="lname">Apa yang terjadi</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="terlapor" name="terlapor" placeholder="">
+      </div>
+    </div>
+               <div class="row">
+      <div class="col-25">
+        <label for="lname">Dilaporkan pada hari</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="kapan" name="kapan" placeholder="">
+      </div>
+    </div>
+    
+    
+    
+           <div class="row">
+      <div class="col-25">
+        <label for="lname">terlapor</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="terlapor" name="terlapor" placeholder="">
+      </div>
+    </div>
+    
+    
+           <div class="row">
+      <div class="col-25">
+        <label for="lname">korban</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="korban" name="korban" placeholder="">
+      </div>
+    </div>
+
+           <div class="row">
+      <div class="col-25">
+        <label for="lname">Pasal KUHP</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="pasal" name="pasal" placeholder="Masukan pasal KUHP">
+      </div>
+    </div>
+
+    
+     <input type="checkbox" name="sumir" value="sumir"> Sumir <br>
+  <input type="checkbox" name="tidak_sumir" value="tidak_sumir" checked> Tidak Sumir<br>
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="lname"> nama saksi</label>
+      </div>
+      <div class="col-75">
+      
+        <input type="text" id="nama1" name="nama1" placeholder="masukkan nama saksi pertama">
+          <input type="text" id="nama2" name="nama2" placeholder="masukkan nama saksi kedua">
+
+      </div>
+    </div> 
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="lname"> umur saksi</label>
+      </div>
+      <div class="col-75">
+      
+        <input type="text" id="umur1" name="umur1" placeholder="masukkan umur saksi pertama">
+          <input type="text" id="umur2" name="umur2" placeholder="masukkan umur saksi kedua">
+
+      </div>
+    </div> 
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="lname"> alamat saksi</label>
+      </div>
+      <div class="col-75">
+      
+        <input type="text" id="alamat1" name="alamat1" placeholder="masukkan alamat saksi pertama">
+          <input type="text" id="alamat2" name="alamat2" placeholder="masukkan alamat saksi kedua">
+
+      </div>
+    </div> 
+    
+      <div class="row">
+      <div class="col-25">
+        <label for="lname"> jenis kelamin saksi</label>
+      </div>
+      <div class="col-75">
+      
+        <input type="text" id="JK1" name="jk2" placeholder="masukkan jenis kelamin saksi pertama">
+          <input type="text" id="nama2" name="nama2" placeholder="masukkan jenis kelamin saksi kedua">
+
+      </div>
+    </div> 
+    
+    
+      <div class="row">
+      <div class="col-25">
+        <label for="lname"> pekerjaan saksi</label>
+      </div>
+      <div class="col-75">
+      
+        <input type="text" id="job1" name="job1" placeholder="masukkan pekerjaan saksi pertama">
+          <input type="text" id="job2" name="job2" placeholder="masukkan pekerjaan saksi kedua">
+
+      </div>
+    </div> 
+    
+        <div class="row">
+      <div class="col-25">
+        <label for="subject">Barang Bukti</label>
+      </div>
+      <div class="col-75">
+        <textarea id="uraian" name="uraian" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    
+    
+    
+        <div class="row">
+      <div class="col-25">
+        <label for="tindakan"> tindakan yang diambil</label>
+      </div>
+      <div class="col-75">
+      
+        <input type="text" id="tindakan1" name="tindakan1" placeholder="masukkan tindakan yang harus diambil">
+          <input type="text" id="tindakan2" name="tindakan2" placeholder="masukkan tindakan yang harus diambil">
+
+      
+    </div> 
+</div>
+    <div class="row"><div class="col-75">
+            <a href = "/polres/laporan_polisi/cetak" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Submit&nbsp;&nbsp;</a>
+            <a href = "/polres/laporan_polisi" class="btn btn-danger"><span class="glyphicon glyphicon-trush"></span>&nbsp;&nbsp;Batal&nbsp;&nbsp;</a>
+            
+      
+
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+
+
+{% endblock %}

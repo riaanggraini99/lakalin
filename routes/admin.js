@@ -18,7 +18,7 @@ router.get('/korban', function(req, res, next) {
     });
   });
   router.get('/rumah_sakit/SK', function(req, res, next) {
-    res.render('admin_SK_rumah_Sakit',{
+    res.render('admin_SK_rumah_sakit',{
         'title': 'SK_rumah_sakit'
     });
   });
@@ -51,6 +51,12 @@ router.get('/korban', function(req, res, next) {
   router.get('/pengajuan_claim/claim', function(req, res, next) {
     res.render('admin_claim',{
         'title': 'claim'
+    });
+  });
+
+  router.get('/statistik', function(req, res, next) {
+    res.render('admin_statistik',{
+        'title': 'statistik'
     });
   });
   

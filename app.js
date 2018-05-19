@@ -27,16 +27,13 @@ fileType = require('file-type');
 var db 				  =	mongoose.connection;
 
 
-// var routes 				= 	require('./routes/index');
+
 var polresRoutes			=	require('./routes/polres');
 var adminRoutes 		=	require('./routes/admin');
-//var addCar				=	require('./routes/car_add');
-//var routeradmin			= 	require('./routes/admin_login');
+var RSroutes 		=	require('./routes/rumahSakit');
 
 var app = express();
-// var admin = express();
-// admin.use('/', adminRoutes);
-// admin.use('/admin', adminRoutes);
+
 
 
 var app = express();
@@ -99,6 +96,7 @@ app.use(function(req,res,next) {
 //app.use('/', users);
 app.use('/admin', adminRoutes);
 app.use('/polres', polresRoutes);
+app.use('/rumah_sakit', RSroutes );
 
 app.get('*', function(req,res,next) {
 	//local variable to hold user info
