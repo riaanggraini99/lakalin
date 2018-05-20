@@ -7,3 +7,4 @@ How to run the system
   - run `npm install` for install the dependencies
   - run `npm run` to run the server to your local server
   - server will running on `localhost:3000/`
+  - for access the homepage you can use `localhost:3000/users` endpoint
