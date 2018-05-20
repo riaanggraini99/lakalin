@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
      res.render('admin_index',{
-         'title': 'Index'
+         'title': 'Indexs'
      });
    }); 
 router.get('/korban', function(req, res, next) {
@@ -12,12 +12,12 @@ router.get('/korban', function(req, res, next) {
     });
   });
 
-  router.get('/rumah_sakit/list', function(req, res, next) {
+  router.get('/list', function(req, res, next) {
     res.render('admin_rumah_sakit',{
         'title': 'rumah_sakit'
     });
   });
-  router.get('/rumah_sakit/SK', function(req, res, next) {
+  router.get('/SK', function(req, res, next) {
     res.render('admin_SK_rumah_sakit',{
         'title': 'SK_rumah_sakit'
     });
@@ -59,5 +59,21 @@ router.get('/korban', function(req, res, next) {
         'title': 'statistik'
     });
   });
+  router.get('/claim_detail', function(req, res, next) {
+    res.render('admin_claim_detail',{
+        'title': 'claim detail'
+    });
+  });
+  router.get('/polisi_SK', function(req, res, next) {
+    res.render('admin_SK_polisi',{
+        'title': 'claim detail'
+    });
+  });
+  router.get('/homepage', function(req, res, next) {
+    res.render('admin_homepage',{
+        'title': 'claim detail'
+    });
+  });
+  
   
   module.exports = router;

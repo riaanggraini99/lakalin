@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin - Start Bootstrap Template</title>
+  <title>Lakalin Admin</title>
   <!-- Bootstrap core CSS-->
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -19,26 +19,26 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <a class="navbar-brand" href="index.html">Welcome Admin</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="/admin">
+            <a class="nav-link" href="/admins">
               <i class="fa fa-fw fa-dashboard"></i>
               <span class="nav-link-text">Dashboard</span>
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="korban">
-            <a class="nav-link" href="/admin/korban">
+            <a class="nav-link" href="/admins/korban">
               <i class="fa fa-fw fa-dashboard"></i>
               <span class="nav-link-text">Detail Korban</span>
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="korban">
-              <a class="nav-link" href="/admin/pengajuan_claim/claim">
+              <a class="nav-link" href="/admins/pengajuan_claim/claim">
                 <i class="fa fa-fw fa-dashboard"></i>
                 <span class="nav-link-text">Pengajuan Claim</span>
               </a>
@@ -52,16 +52,16 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents">
               <li>
-                <a href="/admin/user_management/admin"> Admin</a>
+                <a href="/admins/user_management/admin"> Admin</a>
               </li>
               <li>
-                <a href="/admin/user_management/polres">Polres</a>
+                <a href="/admins/user_management/polres">Polres</a>
               </li>
               <li>
-                  <a href="/admin/user_management/rumah_sakit"> Rumah Sakit</a>
+                  <a href="/admins/user_management/rumah_sakit"> Rumah Sakit</a>
                 </li>
                 <li>
-                  <a href="/admin/user_management/masyarakat">Masyarakat</a>
+                  <a href="/admins/user_management/masyarakat">Masyarakat</a>
                 </li>
             </ul>
           </li>
@@ -72,10 +72,10 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseExamplePages">
               <li>
-                <a href="/admin/rumah_sakit/list">Rumah Sakit List</a>
+                <a href="/admins/list">Rumah Sakit List</a>
               </li>
               <li>
-                  <a href="/admin/rumah_sakit/SK">Surat Keterangan RS</a>
+                  <a href="/admins/SK">Surat Keterangan RS</a>
                 </li>
             </ul>
           </li>
@@ -87,17 +87,17 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseMulti">
               <li>
-                <a href="/admin/kepolisian/polres">Polres List</a>
+                <a href="/admins/kepolisian/polres">Polres List</a>
               </li>
               <li>
-                <a href="#">Surat Keterangan Polisi</a>
+                <a href="/admins/polisi_SK">Surat Keterangan Polisi</a>
               </li>
               <li>
               </li>
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="korban">
-              <a class="nav-link" href="/admin/statistik">
+              <a class="nav-link" href="/admins/statistik">
                 <i class="fa fa-fw fa-dashboard"></i>
                 <span class="nav-link-text">Statistik Kecelakaan</span>
               </a>
@@ -106,7 +106,7 @@
           </li>
 
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/users/">
               <i class="fa fa-fw fa-link"></i>
               <span class="nav-link-text">Redirect to Hompage</span>
             </a>
@@ -210,8 +210,8 @@
             </form>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-              <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <a href="/users/login" class="nav-link" >
+              <i class="fa fa-sign-out"></i>Logout</a>
           </li>
         </ul>
       </div>

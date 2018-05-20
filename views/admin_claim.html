@@ -3,6 +3,44 @@
 
 {% block content %}
 
-<img src="https://sites.google.com/site/excrozer/article/logo%20jasa%20raharja.png" alt="Smiley face" height="42" width="42"> 
-<h2>JASA RAHARJA</h2>
+<body id="page-top" class="fixed-nav sticky-footer bg-dark">
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table">Claim data</i>
+             <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                                <th>No</th>
+                                <th>full name</th>
+                                <th>Jenis Kelamin</th>
+                                <th>adress</th>
+                                <th>NIK</th>
+                                <th>Detail Lokasi</th>
+                                <th>akibat dari</th>
+                                <th>file lampiran</th>
+                            
+                                <th>Status</th>
+                                <th>Action</th>
+                        </tr>
+                    
+                        </thead>
+                        <tbody>
+                                
+                        <tr >
+                                <td>1</td>
+                                <td>paijo</td>
+                                <td>p</td>
+                                <td>ini adress</td>
+                                <td>r5678</td>
+                                <td>jakal</td>
+                                <td>ketabrak kuda</td>
+                                <td>lala.jpg</td>
+                                <td></td>
+                            <td><center><a href = "/admins/claim_detail" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Detail&nbsp;&nbsp;</a>
+                                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Edit</button></center></td>
+                    
+                        </tr>
+
 {% endblock %}

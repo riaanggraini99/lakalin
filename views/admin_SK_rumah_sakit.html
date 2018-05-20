@@ -3,117 +3,38 @@
 
 {% block content %}
 
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<body id="page-top" class="fixed-nav sticky-footer bg-dark">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table">Surat Keterangan Dari RS</i>
+         <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                            <th>No</th>
+                            <th>tanggal</th>
+                            <th>nama dokter</th>
+                            <th>Rumah sakit</th>
+                            <th>Nama Korban</th>
+  
+                    </tr>
+                
+                    </thead>
+                    <tbody>
+                            
+                    <tr >
+                
+                            <td>1</td>
+                            <td>12/12/1221</td>
+                            <td>ini dokter</td>
+                            <td>ini rumah sakit</td>
+                            <td>ini korban</td>
+                            <td><center>
+                                <a href = "" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Detail&nbsp;&nbsp;</a>
+                              <a href = "" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Terima&nbsp;&nbsp;</a>
+                                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Tolak</button></center></td>
+                    
+                    </tr>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container">
-  <form class="form-horizontal">
-      <b>1. Yang bertanda tangan dibawah ini</b>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Nama:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Nama" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Rumah Sakit:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Rumah Sakit" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Alamat:</label>
-      <div class="col-sm-10">
-        <textarea  class="form-control" id="email" placeholder="Alamat" name="email"></textarea>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Tanggal Kecelakaan:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Tanggal Kecelakaan" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Akibat Kecelakaan:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Akibat Kecelakaan" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Jenis Kelamin:</label>
-      <div class="col-sm-3">
-            <div class="radio">
-                    <label><input type="radio" name="optradio">Laki-laki</label>
-                  </div>
-                  <div class="radio">
-                        <label><input type="radio" name="optradio">Perempuan</label>
-                      </div>
-
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Atas nama:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Atas nama" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Jenis Kelamin:</label>
-            <div class="col-sm-3">
-                  <div class="radio">
-                          <label><input type="radio" name="optradio">Laki-laki</label>
-                        </div>
-                        <div class="radio">
-                              <label><input type="radio" name="optradio">Perempuan</label>
-                            </div>
-      
-            </div>
-          </div>
-          
-    <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Alamat:</label>
-            <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Alamat" name="email">
-            </div>
-            </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Umur:</label>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" placeholder="Umur" name="email">
-        </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Keadaan Korban:</label>
-            <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Keadaan Korban" name="email">
-        </div>
-    </div>
-    <hr/>
-    <b>2. Penjelasan Keadaan Korban</b>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Cedera yang diderita korban:</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-            </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Penyakit yang diderita (Diagnosa):</label>
-      <div class="col-sm-10">          
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-      </div>
-    </div>
-    
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Kirim</button>
-      </div>
-    </div>
-  </form>
-</div>
 {% endblock %}

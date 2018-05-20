@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LAKALIN</title>
+
+<link href="../lakalin/css/bootstrap.min.css" rel="stylesheet">
+<link href="../lakalin/css/datepicker3.css" rel="stylesheet">
+<link href="../lakalin/css/styles.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+<!--Icons-->
+<script src="../lakalin/js/lumino.glyphs.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><span>Lakal</span>in</a>
+								<nav id="navbar"  class="navbar-collapse collapse">
+										<ul style="{color:white;}" class="nav navbar-nav navbar-right">
+															<li><a><input href="#" type="text" class="form-control" placeholder="Search"></a></li>
+											<li><a href="/users">Beranda</a></li>
+											<li><a href="/users/map">Maps</a></li>
+											<li><a href="/users/login">Daftar/Masuk</a></li>
+										</ul>
+									</nav>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+
+
+	<div class="col-sm-9 col-sm-offset-1 col-lg-10 col-lg-offset-1 main">			
+		<div class="row">
+			<div class="clear-fix"></div>
+		</div><!--/.row-->
+	
+
+
+  <div class="tab-content">
+	    
+    <div id="home" class="tab-pane fade in active">
+		<div class="row">
+			<div class="col-lg-12">
+			<div class="panel panel-default">
+			<div class="panel-body">
+			
+				<br/>
+				<div class="panel panel-default chat">
+						<div class="">
+								<div id="googleMap" style="width:100%;height:400px;"></div>
+						</div>
+					</div>
+					<br/>
+				</div>
+				</div>
+			</div>
+				
+			</div>
+	</div>
+	
+	<!-- Modal map-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Dimana Lokasi Anda ?</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div id="googleMap" style="width:100%;height:400px;"></div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Simpan Lokasi</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+<!-- Modal map -->
+
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+	</div>	<!--/.main-->
+
+	<script src="../lakalin/js/jquery-1.11.1.min.js"></script>
+	<script src="../lakalin/js/bootstrap.min.js"></script>
+	<script src="../lakalin/js/chart.min.js"></script>
+	<script src="../lakalin/js/chart-data.js"></script>
+	<script src="../lakalin/js/easypiechart.js"></script>
+	<script src="../lakalin/js/easypiechart-data.js"></script>
+	<script src="../lakalin/js/bootstrap-datepicker.js"></script>
+	<script>
+		$('#calendar').datepicker({
+		});
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+		var imgg = [1,2,3,4];
+		var no = 0;
+		$("#posting").click(function(){
+			var isi_postingan = $("#isi_postingan").val();
+			$("#postingan_terbaru").prepend('<li class="left clearfix">'+
+					'<span class="chat-img pull-left">'+
+					'<img src="../lakalin/img/koala.jpg" width="70px" alt="User Avatar" class="img-thumbnail" />'+
+				'</span>'+
+				'<div class="chat-body clearfix"><div class="header"><strong class="primary-font">John Doe</strong> <small class="text-muted">32 mins ago</small> <button data-toggle="modal" data-target="#exampleModal" class="badge badge-success"> <i class="fa fa-map-marker"></i> Tampilkan lokasi</button></div>'+
+					'<p>'+
+					isi_postingan+'<br><br>'+'<img src="../lakalin/img/'+imgg[no++]+'.jpg" width=260px>'+
+					'</p></div><br/><input type="email" class="form-control" id="email" placeholder="Masukan balasan" name="email">'+
+			'</li>');
+			$("#isi_postingan").val('');
+		})
+		
+		
+	</script>	
+	<script>
+		function myMap() {
+		var mapProp= {
+			center:new google.maps.LatLng(-7.793544, 110.365167),
+			zoom:5,
+		};
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		</script>
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp9RVqzzQyP83mDcYTt3bKHtE5OG3dF6k&callback=myMap"></script>
+</body>
+
+</html>

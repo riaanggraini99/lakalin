@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
     res.render('RS_index',{
-        'title': 'Index'
+        'title': 'Indexl'
     });
   });
 
@@ -22,4 +22,9 @@ router.get('/', function(req, res, next) {
        'title': 'cetak surat keterangan'
    });
  });
+ router.get('/user_management', function(req, res, next) {
+  res.render('RS_setting',{
+     'title': 'cetak surat keterangan'
+ });
+});
   module.exports = router
