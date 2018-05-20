@@ -20,7 +20,7 @@
     "formidable": "^1.2.1",
     "fs": "0.0.1-security",
     "http-errors": "~1.6.2",
-    "jade": "~1.11.0",
+  
     "method-override": "^2.3.10",
     "mongodb": "^3.0.5",
     "mongoose": "^5.0.12",
@@ -35,13 +35,6 @@
     "swig": "^1.4.2",
     "util": "^0.10.3",
     "validator": "^9.4.1"
-  },
-  "_moduleAliases": {
-    "@root": ".",
-    "@deep": "src/some/very/deep/directory/or/file",
-    "@my_module": "",
-    "@helpers": "helpers",
-    "@services": "routes/services",
-    "@models": "models"
   }
+  
 }
